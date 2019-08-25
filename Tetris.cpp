@@ -22,13 +22,13 @@ class TetrisModel {
 private:
     int shapes[7][4] = 
     {
-        1,3,5,7, // I
-        2,4,5,7, // Z
-        3,5,4,6, // S
-        3,5,4,7, // T
-        2,3,5,7, // L
-        3,5,7,6, // J
-        2,3,4,5, // O
+        {1,3,5,7}, // I
+        {2,4,5,7}, // Z
+        {3,5,4,6}, // S
+        {3,5,4,7}, // T
+        {2,3,5,7}, // L
+        {3,5,7,6}, // J
+        {2,3,4,5}, // O
     };
         void moveBack() 
     {
@@ -264,7 +264,7 @@ void TetrisViewController::drawObjects(QPainter *painter) {
          {
              if (model.field[i][j])
              {
-                painter->fillRect(QRect(j * 40, i * 40, 40, 40), QColor(255, 10, 10));
+                painter->fillRect(QRect(j * 30, i * 30, 30, 30), QColor(255, 10, 10));
              }
          }
      }
@@ -272,7 +272,7 @@ void TetrisViewController::drawObjects(QPainter *painter) {
      for (int i = 0; i < 4; i++)
      {
          Pos p = model.rep[i];
-         painter->fillRect(QRect(p.x * 40, p.y * 40, 40, 40), QColor(10, 10, 255));
+         painter->fillRect(QRect(p.x * 30, p.y * 30, 30, 30), QColor(10, 10, 255));
      }
 }
 
@@ -314,8 +314,8 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     TetrisViewController TetrisViewController;
-    TetrisViewController.resize(400, 800);
-    TetrisViewController.setWindowTitle("TetrisViewController");
+    TetrisViewController.resize(300, 600);
+    TetrisViewController.setWindowTitle("Tetris Game");
     TetrisViewController.show();
     return app.exec();
 }
