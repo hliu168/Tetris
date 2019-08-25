@@ -1,0 +1,8 @@
+Install Qt5: 
+- sudo apt install qt5-default
+
+Build Project:
+- make
+
+Run:
+./Tetris
