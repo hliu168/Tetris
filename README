@@ -7,25 +7,3 @@ Build and Run Project:
 # qmake
 # make
 # ./Tetris
-
-Project Chosen: Simple Tetris Game
-- There are many aspects left to improve, 
-    e.g. screen size and platform portability.
-    e.g. student (myself) didn't have time to learn SDL and used limited existing knowledge of Qt instead.
-- Also, due to the tight work schedule of student's full time job, he wasn't able to make a perfect game with all features.
-- However, the student (myself) strived to fix all the bugs he found during this limited time.
-
-Code Structure:
-- TetrisModel describes the memory model of the game.
-    - How game field and figure are described in memory
-    - How game state was changed by each move (Key Up to rotate figure, Key Left, Key Right, Move Down
-- TetrisViewController contains majority of the logic of view rendering and event processing
-    - Qt events were used to intercept keyboard event and timer interrupt. 
-
-Rubrics:
-- The project demonstrates an understanding of C++ functions and control structures.
-- The project accepts user input and processes the input. Key left (move left), right (move right), Key up (rotate)
-- The project uses Object Oriented Programming techniques.
-- Classes use appropriate access specifiers for class members.
-- Classes abstract implementation details from their interfaces.
-- Classes encapsulate behavior.
